@@ -1,0 +1,4 @@
+*.pyc
+apache2/
+bin/
+lib/
