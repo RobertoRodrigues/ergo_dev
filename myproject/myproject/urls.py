@@ -15,5 +15,14 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    (r'^grappelli/', include('grappelli.urls')),
+    # (r'^grappelli/', include('grappelli.urls')),
 )
+
+# Configuracao para o Grappelli
+urlpatterns += patterns('', (r'^grappelli/', include('grappelli.urls')),)
+
+urlpatterns += patterns('',
+    url(r'^static/(?P<path>.*)$',
+    'django.views.static.serve',
+    {'document_root': "/home/rrodrigues/webapps/ergo_dev/myproject/static/"}),
+) #Configuracao para servir arquivos estaticos pelo django
