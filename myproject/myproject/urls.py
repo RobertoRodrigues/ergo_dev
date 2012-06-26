@@ -1,11 +1,11 @@
 from django.conf.urls.defaults import patterns, include, url
-from core.views import homepage
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^$', homepage),
+    (r'^$', 'core.views.homepage'),
+    # (r'^evaluation/', include('ergocoin.urls', namespace='ergocoin')),
     # Examples:
     # url(r'^$', 'myproject.views.home', name='home'),
     # url(r'^myproject/', include('myproject.foo.urls')),
