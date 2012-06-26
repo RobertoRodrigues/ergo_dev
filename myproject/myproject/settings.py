@@ -111,6 +111,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     '/home/rrodrigues/webapps/ergo_dev/myproject/templates',
+    '/home/rrodrigues/webapps/ergo_dev/myproject/grappelli/templates',
 )
 
 INSTALLED_APPS = (
