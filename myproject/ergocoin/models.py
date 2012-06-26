@@ -23,7 +23,7 @@ class Type(models.Model):
     def __unicode__(self):
         return self.type
 
-class Value__of_type(models.Model):
+class Value_of_type(models.Model):
     VALUE_CHOICES = (
         ('s', 'Sim'),
         ('n','Não'),
@@ -52,11 +52,11 @@ class Element_of_interaction(models.Model):
 
 class Question(models.Model):
     ergonomic_criterion = models.ForeignKey(Ergonomic_criteria)
-    enunciation = models.CharField('enumciado', max_length=200)
+    enunciation = models.CharField('Enumciado', max_length=200)
     description = models.TextField('Descrição',)
     type = models.ForeignKey(Type)
-    value = models.ForeignKey(Value__of_type)
-    interaction_elements_associated = models. ManyToManyField(Element_of_interaction)
+    value = models.ForeignKey(Value_of_type)
+    interaction_elements_associated = models.ManyToManyField(Element_of_interaction)
     
     def __unicode__(self):
         return self.enunciation
