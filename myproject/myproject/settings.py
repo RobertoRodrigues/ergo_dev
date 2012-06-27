@@ -66,6 +66,8 @@ STATIC_ROOT =  "/home/rrodrigues/webapps/ergo_dev/myproject/static/"
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = "http://ergo.rrodrigues.net/static/"
 
+ADMIN_MEDIA_PREFIX = STATIC_URL + "grappelli/"
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
@@ -111,6 +113,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     '/home/rrodrigues/webapps/ergo_dev/myproject/templates',
+    '/home/rrodrigues/webapps/ergo_dev/myproject/grappelli/templates',
 )
 
 INSTALLED_APPS = (
@@ -120,6 +123,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'grappelli',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
